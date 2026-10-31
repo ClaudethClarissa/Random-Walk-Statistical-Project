@@ -111,20 +111,31 @@ These plots complement the Gaussian fitting and Shapiro–Wilk tests discussed a
 
 This is the main analysis, including code, descriptive summaries, statistical tests and **34 saved plot outputs**. The notebook preserves the original code, Spanish commentary, and saved outputs. It is presented as an archival research analysis rather than a freshly re-executed software pipeline.
 
-## Reports
+## Conference Poster and Statistical Report
 
-- [**Statistics report**](Estad%C3%ADstica.pdf)
-- [**Conference poster**](Poster_Congreso.pdf)
+The project is also documented in its original research materials:
 
-These documents provide additional context alongside the notebook.
+### Conference poster (Spanish)
+
+[**View the original conference poster — Poster_Congreso.pdf**](Poster_Congreso.pdf)
+
+The Spanish-language conference poster is retained in its original form as part of the project's scientific record. It provides a complementary presentation format to the code and figures in the notebook. The English explanations in this README make the research questions, experimental conditions, statistical methods, and interpretive limitations accessible to a wider audience without altering the original poster.
+
+### Statistical report (Spanish)
+
+[**View the original statistics report — Estadística.pdf**](Estad%C3%ADstica.pdf)
+
+The report is another primary project document and should be consulted alongside the notebook when examining the statistical analysis in depth.
+
+*The original documents are preserved in Spanish rather than presented as translated originals. This README provides an English-language guide; it should not be treated as a line-by-line translation of either PDF.*
 
 ## Repository Structure
 
 ```text
 Random-Walk-Statistical-Project/
 ├── Caminante semi-aleatorio.ipynb    # Main statistical analysis
-├── Estadística.pdf                  # Statistical report
-├── Poster_Congreso.pdf               # Conference poster
+├── Estadística.pdf                  # Original Spanish-language statistical report
+├── Poster_Congreso.pdf               # Original Spanish-language conference poster
 ├── figures/                          # Selected original notebook plots
 ├── Números Aleatorios/               # Stored random-number samples
 ├── Partículas con 50% y 50%/         # 100 trajectories
