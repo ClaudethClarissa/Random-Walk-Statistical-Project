@@ -120,7 +120,9 @@ The [original conference poster](Poster_Congreso.pdf), titled *Simulación Simpl
 1. **Random-walk model (documented by this notebook):** direction choices generated from random numbers, comparing four probability settings. The poster shows ensembles of trajectories and endpoint histograms, emphasizing that directional preferences lead to collective drift.
 2. **Interacting-particle model (presented in the poster):** Monte Carlo simulations with a **Lennard–Jones potential**, comprising a short-range repulsive term and a longer-range attractive term:
 
-   \[V(r) = 4\varepsilon\left[\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right].\]
+   ```math
+   V(r) = 4\varepsilon \left[\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right]
+   ```
 
    The poster reports reduced number density **n* = 0.4**, reduced temperatures **T* = 1.500** and **0.7500**, and simulation panels labeled 15,000 and 100,000 steps. Its qualitative conclusion is that interacting particles fluctuate near relatively stable arrangements, unlike the more freely wandering random walkers. **The Lennard–Jones simulation code and corresponding data are not present in this repository; those results are documented through the poster only.**
 
