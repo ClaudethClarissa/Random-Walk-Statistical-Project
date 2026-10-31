@@ -83,6 +83,28 @@ The saved normality results vary by scenario and by how the samples were supplie
 
 The central interpretation is **how directional probabilities shape ensemble displacement and dispersion**, rather than a claim that all simulated endpoint distributions are exactly normal.
 
+## Results and Visualizations
+
+### Representative trajectories: symmetric vs biased motion
+
+The paths below are **original saved plots from the research notebook**, showing one example particle per condition. A single path illustrates possible behavior, but conclusions about ensemble averages require all trajectories.
+
+| Symmetric random walk (50% / 50%) | Directionally biased walk (60% / 60%) |
+|---|---|
+| ![Original trajectory for particle 1wb002 under symmetric movement probabilities](figures/symmetric-trajectory.png) | ![Original trajectory for particle 1wc001 under biased movement probabilities](figures/biased-trajectory.png) |
+
+The symmetric case has no nominal preferred direction; the 60% / 60% case favors positive steps in both coordinates. Individual trajectories still exhibit stochastic fluctuations.
+
+### Endpoint distributions
+
+Histograms summarize the final recorded X and Y coordinates **across 100 particles** in each of the two conditions.
+
+| Symmetric endpoints (50% / 50%) | Biased endpoints (60% / 60%) |
+|---|---|
+| ![Original histogram pair of final X and Y positions in symmetric condition](figures/symmetric-endpoint-histograms.png) | ![Original histogram pair of final X and Y positions in 60%-60% biased condition](figures/biased-endpoint-histograms.png) |
+
+These plots complement the Gaussian fitting and Shapiro–Wilk tests discussed above. They are empirical histograms, **not** overlaid theoretical Gaussian-fit curves. All four images were extracted from saved notebook outputs; no new simulation was run to create them.
+
 ## Analysis Notebook
 
 [**Caminante semi-aleatorio.ipynb**](Caminante%20semi-aleatorio.ipynb)
@@ -103,6 +125,7 @@ Random-Walk-Statistical-Project/
 ├── Caminante semi-aleatorio.ipynb    # Main statistical analysis
 ├── Estadística.pdf                  # Statistical report
 ├── Poster_Congreso.pdf               # Conference poster
+├── figures/                          # Selected original notebook plots
 ├── Números Aleatorios/               # Stored random-number samples
 ├── Partículas con 50% y 50%/         # 100 trajectories
 ├── Partículas con 55% y 55%/         # 100 trajectories
