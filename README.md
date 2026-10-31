@@ -4,9 +4,11 @@
 
 ## Overview
 
-This project examines two-dimensional random walks by comparing particle trajectories under symmetric and directionally biased movement probabilities. The analysis uses stored trajectories for **100 particles per scenario**, with **10,000 recorded positions per particle**, and investigates how changes in step probabilities affect the distribution of particle positions.
+This repository documents the **random-walk statistical analysis** from a broader undergraduate biophysics research project titled *Simulación Simplificada de Movimiento Browniano* (*Simplified Simulation of Brownian Motion*). The research also investigated interacting particles through Lennard–Jones simulations, presented in the original conference poster. The executable notebook and stored trajectory data in this repository focus on the random-walk component.
 
-The motivation is relevant to stochastic transport and biophysics, where directional bias may arise in the presence of an external gradient.
+The notebook examines two-dimensional random walks by comparing particle trajectories under symmetric and directionally biased movement probabilities. The analysis uses stored trajectories for **100 particles per scenario**, with **10,000 recorded positions per particle**, and investigates how changes in step probabilities affect the distribution of particle positions.
+
+The motivation is relevant to stochastic transport and biophysics, where directional bias may arise in the presence of an external gradient, for example the concentration of signaling molecules. The poster connects this simplified picture to colloidal systems and biological matter.
 
 [**Explore the statistical analysis notebook**](Caminante%20semi-aleatorio.ipynb) · [**View the project poster**](Poster_Congreso.pdf)
 
@@ -111,6 +113,21 @@ These plots complement the Gaussian fitting and Shapiro–Wilk tests discussed a
 
 This is the main analysis, including code, descriptive summaries, statistical tests and **34 saved plot outputs**. The notebook preserves the original code, Spanish commentary, and saved outputs. It is presented as an archival research analysis rather than a freshly re-executed software pipeline.
 
+## Broader Research Context: Brownian Motion and Interacting Particles
+
+The [original conference poster](Poster_Congreso.pdf), titled *Simulación Simplificada de Movimiento Browniano*, presents **two complementary modeling approaches**:
+
+1. **Random-walk model (documented by this notebook):** direction choices generated from random numbers, comparing four probability settings. The poster shows ensembles of trajectories and endpoint histograms, emphasizing that directional preferences lead to collective drift.
+2. **Interacting-particle model (presented in the poster):** Monte Carlo simulations with a **Lennard–Jones potential**, comprising a short-range repulsive term and a longer-range attractive term:
+
+   \[V(r) = 4\varepsilon\left[\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right].\]
+
+   The poster reports reduced number density **n* = 0.4**, reduced temperatures **T* = 1.500** and **0.7500**, and simulation panels labeled 15,000 and 100,000 steps. Its qualitative conclusion is that interacting particles fluctuate near relatively stable arrangements, unlike the more freely wandering random walkers. **The Lennard–Jones simulation code and corresponding data are not present in this repository; those results are documented through the poster only.**
+
+The poster also references random-walk panels labeled **100,000 steps**, whereas the notebook here reads **10,000 stored positions per trajectory**. The README follows the notebook when describing its directly inspectable analysis and does not assume these are the same simulation runs.
+
+The poster describes the random-walk results as compatible with Gaussian distributions based on Shapiro–Wilk testing, while the stored notebook contains some combined-coordinate tests and a Y-coordinate rejection (p = 0.005) in the 60% / 50% condition. Accordingly, the README reports the individual tests as recorded and does not claim universal normality.
+
 ## Conference Poster and Statistical Report
 
 The project is also documented in its original research materials:
@@ -119,7 +136,7 @@ The project is also documented in its original research materials:
 
 [**View the original conference poster — Poster_Congreso.pdf**](Poster_Congreso.pdf)
 
-The Spanish-language conference poster is retained in its original form as part of the project's scientific record. It provides a complementary presentation format to the code and figures in the notebook. The English explanations in this README make the research questions, experimental conditions, statistical methods, and interpretive limitations accessible to a wider audience without altering the original poster.
+The Spanish-language conference poster is retained in its original form as part of the project's scientific record. It presents the co-authored research, including both the random-walk analysis and the Lennard–Jones comparison. The English explanations in this README make the research questions, experimental conditions, statistical methods, and interpretive limitations accessible to a wider audience without altering the original poster.
 
 ### Statistical report (Spanish)
 
@@ -164,6 +181,8 @@ Run the notebook from the **repository root**, keeping the existing trajectory f
 - Some Shapiro–Wilk tests were applied to a two-column DataFrame rather than to X and Y separately; interpret these saved results as combined-sample tests, not coordinate-wise evidence.
 - One early-position Y test in the 60% / 50% section repeats the final-position Y sample. This is documented above but not corrected in the original notebook.
 - A Gaussian fit to marginal coordinates does not establish a bivariate Gaussian joint distribution.
+- The poster covers additional Lennard–Jones simulations that are **not reproducible from the uploaded notebook alone**.
+- Some step counts on the poster differ from the length of the stored notebook trajectories; they should not be treated as identical runs without the original simulation provenance.
 - The stored trajectory dataset is large. Its full inclusion supports inspection but makes cloning the repository heavier.
 
 ---
